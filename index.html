@@ -39,6 +39,16 @@
             margin: 0px;
             padding: 0px;
         }
+
+
+        /* .colorClass{
+            background-color: #E527B2;
+            color:white;
+            
+        } */
+
+
+
     </style>
 
 
@@ -522,8 +532,8 @@
                     <h3 class="text-black2 2xl:text-2xl lg:text-lg font-medium mb-4">Have coupon?</h3>
 
                     <div class="bg-white  border-2 rounded-lg flex justify-between">
-                        <input class=" p-2 py-[6px] w-32  md:flex-1 lg:w-3 " type="text" placeholder="Coupon code">
-                        <button class="bg-[#E527B2] text-white hover:bg-rose-500 px-9 py-2 rounded-r-lg ">Apply</button>
+                        <input id="promoCode" class=" p-2 py-[6px] w-32  md:flex-1 lg:w-3 " type="text" placeholder="Coupon code">
+                        <button onclick="handleDiscount()" id="couponApply" disabled="disabled" class="bg-[#11111180] text-black  px-9 py-2 rounded-r-lg ">Apply</button>
                     </div>
                 </div>
 
@@ -539,14 +549,14 @@
 
                     <div class="">
                         <h3 class="text-black2 2xl:text-2xl lg:text-lg font-medium mb-4">Total price: <span id="total" class="text-[#11111180]">0</span><span class="text-[#11111180]">TK</span></h3>
-                        <h3 class="text-black2 2xl:text-2xl lg:text-lg font-medium mb-4">Discount: <span class="text-[#11111180]">0</span><span class="text-[#11111180]">TK</span></h3>
-                        <h3 class="text-black2 2xl:text-2xl lg:text-lg font-medium mb-4">Total: <span class="text-[#11111180]">0</span><span class="text-[#11111180]">TK</span></h3>
+                        <h3 class="text-black2 2xl:text-2xl lg:text-lg font-medium mb-4">Discount: <span id="discountPrice" class="text-[#11111180]">0</span><span class="text-[#11111180]">TK</span></h3>
+                        <h3 class="text-black2 2xl:text-2xl lg:text-lg font-medium mb-4">Total: <span id="grandPrice" class="text-[#11111180]">0</span><span class="text-[#11111180]">TK</span></h3>
                     </div>
 
                     <hr class=" 2xl:w-72 lg:w-32 mx-auto bg-[#11111180] ">
 
                     <div class="lg:absolute lg:-bottom-5 lg:left-6 2xl:left-20 flex justify-center items-center">
-                        <button class="bg-[#E527B2] text-white hover:bg-rose-500 px-9 py-2 rounded-lg "
+                        <button id="makePurchase" disabled="disabled" class="bg-[#11111180] text-black px-9 py-2 rounded-lg "
                             onclick="my_modal_5.showModal()">Make Purchase</button>
 
                         <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
@@ -562,8 +572,7 @@
                                 </div>
                                 <div class="modal-action flex items-center justify-center">
                                     <!-- if there is a button in form, it will close the modal -->
-                                    <button
-                                        class="btn bg-[#E527B2] text-white hover:bg-rose-500 rounded-lg">Close</button>
+                                    <button id="thanksP" onclick="goHome()" class="btn bg-[#E527B2] text-white hover:bg-rose-500 rounded-lg">Go Home</button>
 
                                 </div>
                             </form>
@@ -593,3 +602,7 @@
 
 
 </html>
+
+
+
+<!-- bg-[#E527B2] text-white hover:bg-rose-500 -->
